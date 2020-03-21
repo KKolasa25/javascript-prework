@@ -2,7 +2,6 @@
 
 var argButtonName, buttonPaper, buttonRock, buttonScissors, //buttonTest;
 
-//buttonTest = document.getElementById('button-test');
 buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
 buttonScissors = document.getElementById('button-scissors');
@@ -19,30 +18,29 @@ function buttonClicked(argButtonName) {
     function clearMessages() {
         document.getElementById('messages').innerHTML = '';
     }
-
-    var computerMove, randomNumber;
-    randomNumber = Math.floor(Math.random() * 3 + 1);
-    console.log('wylosowana liczba to: ' + randomNumber);
-    if (randomNumber == '1') {
-        computerMove = 'kamień';
-    } else if (randomNumber == '2') {
-        computerMove = 'papier';
-    } else if (randomNumber == '3') {
-        computerMove = 'nożyce';
-    }
-    printMessage('Mój ruch: ' + computerMove);
-
-    var playerInput, playerMove;
-    if (playerInput == '1') {
+    
+    // Czy to jest w ogóle potrzebne? //
+    //var computerMove, randomNumber;
+    //randomNumber = Math.floor(Math.random() * 3 + 1);
+    //console.log('wylosowana liczba to: ' + randomNumber);
+    //if (randomNumber == '1') {
+    //    computerMove = 'kamień';
+    //} else if (randomNumber == '2') {
+    //    computerMove = 'papier';
+    //} else if (randomNumber == '3') {
+    //    computerMove = 'nożyce';
+    //}
+    //printMessage('Mój ruch: ' + computerMove);
+    
+    var playerMove, argButtonName;
+    if (playerInput == argButtonName) {
         playerMove = 'kamień';
-    } else if (playerMove == '2') {
-        playerInput = 'papier';
-    } else if (playerMove == '3') {
-        playerInput = 'nożyce';
-    } else {
-        playerMove = 'nieznany ruch';
-    }
-    printMessage('Twój ruch: ' + playerMove);
+    } else if (playerInput == argButtonName) {
+        playerMove = 'papier';
+    } else if (playerInput == argButtonName) {
+        playerMove = 'nożyce';
+    } 
+    printMessage('Wybrałeś: ' + argButtonName + '...');
 
     var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
 
@@ -73,7 +71,7 @@ function buttonClicked(argButtonName) {
         } else {
             printMessage('Przegrywasz :(');
         }
-        printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+        printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove + '.' );
     }
     playerMove = argButtonName;
     console.log('wybór ruchu gracza to: ' + playerMove);
@@ -85,7 +83,6 @@ function buttonClicked(argButtonName) {
     displayResult(playerMove, computerMove);
 }
 
-//buttonTest.addEventListener('click', function () { buttonClicked('Guzik TEST'); });
 buttonRock.addEventListener('click', function () { buttonClicked('kamień'); });
 buttonPaper.addEventListener('click', function () { buttonClicked('papier'); });
 buttonScissors.addEventListener('click', function () { buttonClicked('nożyce'); });
