@@ -35,10 +35,10 @@ function buttonClicked(argButtonName) {
     var playerInput, playerMove;
     if (playerInput == '1') {
         playerMove = 'kamień';
-    } else if (playerInput == '2') {
-        playerMove = 'papier';
-    } else if (playerInput == '3') {
-        playerMove = 'nożyce';
+    } else if (playerMove == '2') {
+        playerInput = 'papier';
+    } else if (playerMove == '3') {
+        playerInput = 'nożyce';
     } else {
         playerMove = 'nieznany ruch';
     }
