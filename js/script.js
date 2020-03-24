@@ -1,6 +1,5 @@
 
-
-var argButtonName, buttonPaper, buttonRock, buttonScissors
+let argButtonName, buttonPaper, buttonRock, buttonScissors;
 
 buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
