@@ -1,5 +1,5 @@
 
-let argButtonName, buttonPaper, buttonRock, buttonScissors;
+let buttonPaper, buttonRock, buttonScissors;
 
 buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
@@ -9,7 +9,7 @@ function buttonClicked(argButtonName) {
     clearMessages();
     console.log(argButtonName + ' został kliknięty');
     
-    let computerMove, randomNumber;
+    let computerMove, randomNumber, playerInput, playerMove;
     randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log('wylosowana liczba to: ' + randomNumber);
     if (randomNumber == '1') {
@@ -20,18 +20,16 @@ function buttonClicked(argButtonName) {
         computerMove = 'nożyce';
     }
     printMessage('Mój ruch: ' + computerMove);
-    
-    var playerMove, argButtonName;
-    if (playerInput == argButtonName) {
+
+    if (playerInput == '1') {
         playerMove = 'kamień';
-    } else if (playerInput == argButtonName) {
+    } else if (playerInput == '2') {
         playerMove = 'papier';
-    } else if (playerInput == argButtonName) {
+    } else if (playerInput == '3') {
         playerMove = 'nożyce';
     } 
     printMessage('Wybrałeś: ' + argButtonName + '...');
 
-    var argMoveId, argPlayerMove, argComputerMove, playerMove, playerInput;
     function getMoveName(argMoveId) {
         console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
         if (argMoveId == 1) {
@@ -49,11 +47,11 @@ function buttonClicked(argButtonName) {
     function displayResult(argPlayerMove, argComputerMove) {
         console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
         if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
-            printMessage('Wygrywasz!');
+            printMessage('Wygrywasz :D !');
         } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
-            printMessage('Wygrywasz!');
+            printMessage('Wygrywasz :D !');
         } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
-            printMessage('Wygrywasz!');
+            printMessage('Wygrywasz :D !');
         } else if (argPlayerMove == argComputerMove) {
             printMessage('Remis!');
         } else {
