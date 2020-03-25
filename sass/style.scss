@@ -1,22 +1,18 @@
-#button-rock {
-    background-color: #60a3bc;
+.button-look {
     color: white;
     border-radius: 10%;
     font-size: 56px;
+}
+
+#button-rock {
+background-color: #60a3bc;
 }
 
 #button-paper {
-    background-color: #079992;
-    color: white;
-    border-radius: 10%;
-    font-size: 56px;
-}
+    background-color: #079992;}
 
 #button-scissors {
     background-color: #0a3d62;
-    color: white;
-    border-radius: 10%;
-    font-size: 56px;
 }
 
 .container {
