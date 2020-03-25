@@ -1,15 +1,12 @@
-
-let buttonPaper, buttonRock, buttonScissors;
-
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
-buttonScissors = document.getElementById('button-scissors');
+const buttonRock = document.getElementById('button-rock');
+const buttonPaper = document.getElementById('button-paper');
+const buttonScissors = document.getElementById('button-scissors');
 
 function buttonClicked(argButtonName) {
     clearMessages();
     console.log(argButtonName + ' został kliknięty');
     
-    let computerMove, randomNumber, playerInput, playerMove;
+    let computerMove, randomNumber
     randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log('wylosowana liczba to: ' + randomNumber);
     if (randomNumber == '1') {
@@ -21,6 +18,7 @@ function buttonClicked(argButtonName) {
     }
     printMessage('Mój ruch: ' + computerMove);
 
+    let playerInput, playerMove;
     if (playerInput == '1') {
         playerMove = 'kamień';
     } else if (playerInput == '2') {
